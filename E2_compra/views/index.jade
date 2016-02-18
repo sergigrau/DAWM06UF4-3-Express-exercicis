@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Compra de productes 
+  form(name="formulari", method="post" action="/comprar")
+    select(id="producte", name="producte")
+        each val in productes
+            option(value="#{val}") #{val}
+    br
+    input(type="text", name="unitats")
+    br
+    input(type="submit", value="compra")
+    br
+    a(href='resum') Resum dels productes comprats

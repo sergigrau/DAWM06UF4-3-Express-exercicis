@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<!--
+/*
+ * Aplicació amb express que inverteix una cadena amb AJAX
+ * @author sergi grau, sergi.grau@fje.edu
+ * @version 1.0
+ * date 05.02.2016
+ * format del document UTF-8
+ *
+ * CHANGELOG
+ * 05.02.2016
+ * - Aplicació amb express que en funció d'un paràmetre mostra una imatge
+ *
+ * NOTES
+ * ORIGEN
+ * Desenvolupament Aplicacions Web. Jesuïtes El Clot
+ */
+-->
+<html lang="ca">
+	<head>
+		<meta charset="utf-8" />
+		<title>Exercici3</title>
+		<meta name="author" content="sergi.grau@fje.edu" />
+		<link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			body {
+				font-family: 'Telex', sans-serif;
+			}
+			.lletres {
+				float: left;
+				width: 200px;
+				height: 800px;;
+			}
+			
+		</style>
+		<script src="https://code.jquery.com/jquery-2.2.0.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$().ready(function() {
+
+				$('#cadena').keyup(function() {
+					$.get('/invertir?cadena='+ $('#cadena').val(), function(dades) {
+						$('#invertida').html(dades);
+						});
+						
+					});
+					return false;
+				});
+		</script>
+	</head>
+	<body>
+		<input id="cadena" type="text" />
+        <div id="invertida"></div>
+	</body>
+</html>

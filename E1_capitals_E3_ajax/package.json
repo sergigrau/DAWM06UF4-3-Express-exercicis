@@ -1,0 +1,11 @@
+{
+  "name": "capitals",
+  "version": "1.0.0",
+  "description": "exercici 1",
+  "main": "E1_capitals.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sergi.grau@fje.edu",
+  "license": "ISC"
+}
